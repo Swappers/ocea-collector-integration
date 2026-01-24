@@ -1,0 +1,33 @@
+{
+  "title": "Ocea Collector",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Ocea",
+        "description": "Enter your Ocea account details.",
+        "data": {
+          "username": "Email",
+          "password": "Password",
+          "update_interval": "Update interval"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This account is already configured."
+    },
+    "error": {
+      "cannot_connect": "Failed to connect.",
+      "invalid_auth": "Invalid authentication."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Ocea options",
+        "data": {
+          "update_interval": "Update interval"
+        }
+      }
+    }
+  }
+}

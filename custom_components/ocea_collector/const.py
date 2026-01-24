@@ -1,0 +1,21 @@
+from datetime import timedelta
+
+DOMAIN = "ocea_collector"
+
+CONF_USERNAME = "username"
+CONF_PASSWORD = "password"
+CONF_UPDATE_INTERVAL = "update_interval"
+
+UPDATE_INTERVAL_CHOICES = {
+    3600: "1h",
+    10800: "3h",
+    21600: "6h",
+}
+DEFAULT_UPDATE_INTERVAL = 3600
+UPDATE_INTERVAL_JITTER_SECONDS = 300
+DEFAULT_SCAN_INTERVAL = timedelta(seconds=DEFAULT_UPDATE_INTERVAL)
+
+ATTRIBUTION = "Data provided by Ocea"
+
+AUTH_RETRY_DELAY_SECONDS = 300
+AUTH_RETRY_MAX = 5

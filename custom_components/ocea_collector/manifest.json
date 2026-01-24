@@ -1,0 +1,14 @@
+{
+  "domain": "ocea_collector",
+  "name": "Ocea Collector",
+  "codeowners": [
+    "Swappers"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/swappers/ocea-collector-integration",
+  "iot_class": "cloud_polling",
+  "after_dependencies": [
+    "recorder"
+  ],
+  "version": "0.1.7"
+}
