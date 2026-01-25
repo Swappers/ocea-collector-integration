@@ -159,6 +159,8 @@ class OceaCoordinator(DataUpdateCoordinator[OceaData]):
             raw_entry = raw.get(key, {})
             current_total = raw_entry.get("latest_value")
             leak_estimate = raw_entry.get("leak_estimate")
+            if leak_estimate is None:
+                leak_estimate = "unknown"
             api_date = _parse_date(raw_entry.get("latest_date"))
             current_date = api_date
             if current_date is None or (

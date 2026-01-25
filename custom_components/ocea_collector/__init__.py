@@ -16,7 +16,7 @@ from homeassistant.helpers import config_validation as cv
 from .coordinator import OceaCoordinator
 from .const import DOMAIN, SERVICE_FETCH
 
-PLATFORMS: list[Platform] = [Platform.SENSOR]
+PLATFORMS: list[Platform] = [Platform.SENSOR, Platform.BUTTON]
 
 _LOGGER = logging.getLogger(__name__)
 

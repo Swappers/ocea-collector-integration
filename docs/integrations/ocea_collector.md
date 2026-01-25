@@ -64,6 +64,8 @@ the integration uses yesterday as the effective date.
 Call the `ocea_collector.fetch_now` service to trigger an immediate refresh.
 Optionally pass `entry_id` to refresh a specific config entry.
 
+The integration also exposes a device button named **Fetch now**.
+
 ## Troubleshooting
 
 If the integration cannot authenticate, verify your credentials and retry. If

@@ -83,7 +83,7 @@ async def async_setup_entry(
 
     for fluid_key, meta in FLUIDS.items():
         for description in SENSORS:
-            if description.key == "leak_estimate" and meta.get("unit") != "m3":
+            if description.key == "leak_estimate" and meta.get("unit") not in ("m3", "L"):
                 continue
             entities.append(
                 OceaSensor(

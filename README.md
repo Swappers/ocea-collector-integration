@@ -55,3 +55,5 @@ ocea_collector.fetch_now
 ```
 
 Optional: pass `entry_id` to refresh a specific config entry.
+
+The integration also exposes a device button named **Fetch now**.
