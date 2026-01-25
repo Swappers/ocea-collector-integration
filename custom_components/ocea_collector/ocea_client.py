@@ -325,9 +325,6 @@ class OceaClient:
             return
         if self._try_refresh():
             return
-        if self._try_ropc():
-            return
-        LOGGER.debug("ROPC failed or not supported, trying PKCE flow.")
         self._auth_pkce()
 
     def _get(self, path: str) -> dict:

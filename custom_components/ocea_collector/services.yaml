@@ -1,0 +1,8 @@
+fetch_now:
+  name: Fetch now
+  description: Trigger an immediate data refresh from Ocea.
+  fields:
+    entry_id:
+      name: Entry ID
+      description: Optional config entry ID to refresh a single instance.
+      example: "abcd1234efgh5678"

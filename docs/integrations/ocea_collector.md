@@ -59,6 +59,11 @@ Ocea often updates once in the morning. Before that update, values may still
 reflect D-2. When the API returns the first day of the month as `latest_date`,
 the integration uses yesterday as the effective date.
 
+## Manual refresh
+
+Call the `ocea_collector.fetch_now` service to trigger an immediate refresh.
+Optionally pass `entry_id` to refresh a specific config entry.
+
 ## Troubleshooting
 
 If the integration cannot authenticate, verify your credentials and retry. If

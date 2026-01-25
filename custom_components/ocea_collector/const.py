@@ -19,3 +19,5 @@ ATTRIBUTION = "Data provided by Ocea"
 
 AUTH_RETRY_DELAY_SECONDS = 300
 AUTH_RETRY_MAX = 5
+
+SERVICE_FETCH = "fetch_now"

@@ -45,3 +45,13 @@ Daily sensors are informative only; totals are used to build statistics.
 Ocea often updates once in the morning. Before that, values can still reflect D-2.
 If the API returns a "first day of month" date, the integration uses yesterday
 as the effective date. The raw API date is exposed as `api_latest_date`.
+
+## Manual refresh
+
+You can trigger a refresh with the service:
+
+```
+ocea_collector.fetch_now
+```
+
+Optional: pass `entry_id` to refresh a specific config entry.
