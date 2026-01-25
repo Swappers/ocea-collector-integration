@@ -53,6 +53,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
                 _LOGGER.warning("No Ocea entries available to refresh.")
                 return
 
+            _LOGGER.info(
+                "Manual fetch service called (entries=%s).",
+                [item.config_entry.entry_id for item in targets],
+            )
             await asyncio.gather(
                 *(target.async_request_refresh() for target in targets)
             )

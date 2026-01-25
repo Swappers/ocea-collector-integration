@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import logging
+
 from homeassistant.components.button import ButtonEntity
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
@@ -10,6 +12,8 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import DOMAIN
 from .coordinator import OceaCoordinator
+
+_LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_entry(
@@ -39,4 +43,5 @@ class OceaFetchButton(CoordinatorEntity[OceaCoordinator], ButtonEntity):
         )
 
     async def async_press(self) -> None:
+        _LOGGER.info("Manual fetch button pressed.")
         await self.coordinator.async_request_refresh()
