@@ -43,5 +43,5 @@ class OceaFetchButton(CoordinatorEntity[OceaCoordinator], ButtonEntity):
         )
 
     async def async_press(self) -> None:
-        _LOGGER.info("Manual fetch button pressed.")
+        _LOGGER.warning("Manual fetch button pressed.")
         await self.coordinator.async_request_refresh()
